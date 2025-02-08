@@ -1,8 +1,11 @@
-# Next.js & HeroUI Template
+# Decentralized Untraceable Stable Coin (DUSC)
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+
+![alt text](image.png)
+
+
+[SMART CONTRACTS REPO](https://github.com/Purva-Chaudhari/DUSC)
 
 ## Technologies Used
 
@@ -16,13 +19,7 @@ This is a template for creating applications using Next.js 14 (app directory) an
 
 ## How to Use
 
-### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
 
 ### Install dependencies
 
@@ -38,12 +35,16 @@ npm install
 npm run dev
 ```
 
-### Setup pnpm (optional)
+### Setup env variables
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+
 
 ```bash
-public-hoist-pattern[]=*@heroui/*
+CONTRACT_ADDRESS=0x36C126f4D8c30a77a29E6Ff4416c5AdD1b622dE0
+
+RPC=https://rpc-evm-sidechain.xrpl.org
+
+SEMAPHORE_CONTRACT=0x825891672a3087A3f966F1d48E17F1A623642902
 ```
 
 After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
