@@ -51,16 +51,17 @@ export default function XRPLBridge() {
         users= (members.map((member)=>members.toString()))
         console.log(users)
         const group = new Group(members);
+        
         console.log("grouo : ", group)
         console.log("identity", identity
         )
 
-        // const {points, merkleTreeDepth, merkleTreeRoot, nullifier} = await generateProof(
-        //     identity,
-        //     group,
-        //     '0',
-        //     '1'
-        // );
+        const {points, merkleTreeDepth, merkleTreeRoot, nullifier} = await generateProof(
+            identity,
+            group,
+            '0',
+            '1'
+        );
 
 
         // console.log(points, merkleTreeDepth, merkleTreeRoot, nullifier)
