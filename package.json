@@ -29,6 +29,7 @@
   "@tanstack/react-query": "^5.66.0",
   "class-variance-authority": "^0.7.1",
   "clsx": "^2.1.1",
+  "ethers": "^6.13.5",
   "framer-motion": "^11.18.2",
   "intl-messageformat": "^10.5.0",
   "lucide-react": "^0.475.0",
@@ -39,7 +40,8 @@
   "react-dom": "18.3.1",
   "tailwind-merge": "^3.0.1",
   "tailwindcss-animate": "^1.0.7",
-  "wagmi": "^2.12.0"
+  "wagmi": "^2.12.0",
+  "web3": "^4.16.0"
  },
  "devDependencies": {
   "@next/eslint-plugin-next": "15.0.4",
