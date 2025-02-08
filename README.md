@@ -1,8 +1,6 @@
-# Next.js & HeroUI Template
+# Decentralized Untrackable Stable Coin in XRP
 
 This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
 
 ## Technologies Used
 
@@ -13,16 +11,11 @@ This is a template for creating applications using Next.js 14 (app directory) an
 - [TypeScript](https://www.typescriptlang.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
+- [Ethers.js](https://docs.ethers.org/v5/)
+- [RainbowKit](https://www.rainbowkit.com/)
+- [Semaphore-protocol](https://github.com/semaphore-protocol/semaphore)
 
-## How to Use
 
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
 
 ### Install dependencies
 
@@ -37,16 +30,6 @@ npm install
 ```bash
 npm run dev
 ```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
 
 ## License
 
