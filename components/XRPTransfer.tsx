@@ -8,12 +8,14 @@ import Web3 from "web3";
 import {useAccount, useBalance} from "wagmi";
 import {BrowserProvider, ethers, JsonRpcSigner} from "ethers";
 import {SemaphoreEthers} from "@semaphore-protocol/data";
+import { error } from "console";
 
 export default function XRPLBridge() {
     const {address, isConnected, chain} = useAccount();
     const [depositAmount, setDepositAmount] = useState("");
     const [depositPassword, setDepositPassword] = useState("test");
     const [mintPassword, setMintPassword] = useState("");
+    const [error,setError] = useState("")
     const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
     const RPC = process.env.RPC;
     const SEMAPHORE_CONTRACT = process.env.SEMAPHORE_CONTRACT;
@@ -39,6 +41,10 @@ export default function XRPLBridge() {
     }
 
     async function mint() {
+        if (mintPassword!=depositPassword){
+            setError('Password is not the same')
+            return
+        }
         const semaphore = new SemaphoreEthers(RPC, {
             address: SEMAPHORE_CONTRACT,
         });
@@ -51,7 +57,7 @@ export default function XRPLBridge() {
         users= (members.map((member)=>members.toString()))
         console.log(users)
         const group = new Group(members);
-        
+
         console.log("grouo : ", group)
         console.log("identity", identity
         )
@@ -106,6 +112,7 @@ export default function XRPLBridge() {
             <h1 className="text-xl font-bold">Transfer assets across XRPL chains.</h1>
 
             <BackgroundGradient className="rounded-[22px] max-w-xl p-4 sm:p-10 bg-zinc-900">
+            {error && <div className="text-red-500 mb-4">{error}</div>}
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                     <Card className="relative p-6 w-full sm:w-1/2 max-w-lg bg-transparent border-0 flex flex-col items-center">
                         <p className="mb-2">Deposit</p>
