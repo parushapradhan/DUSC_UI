@@ -2,15 +2,18 @@
 import { Button, Card, Input } from "@heroui/react";
 import { useState } from "react";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { Identity } from "@semaphore-protocol/core"
+import {abi} from "@/public/@abi.json"
 
 
 export default function XRPLBridge() {
   const [depositAmount, setDepositAmount] = useState("");
   const [depositPassword, setDepositPassword] = useState("");
   const [mintPassword, setMintPassword] = useState("");
+  const [identity, setIdentity] = useState(null);
  
   function handleTransfer(){
-    //transfer call add here 
+    
   }
 
 
